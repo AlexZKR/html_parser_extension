@@ -3,13 +3,18 @@
     "name": "html_parser_extension",
     "description": "A chrome extension that lets you auto parse html from specific pages that don`t provide API",
     "version": "1.0",
+    "background": {
+    "service_worker": "background.js"
+  },
     "action": {
       "default_popup": "popup.html"
     },
+    
     "content_scripts":[
       {
         "matches":["file:///home/alex/repos/html_parser_extension/test.html"],
         "js":["js/content-script.js"]
       }
     ]
+
   }
